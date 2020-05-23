@@ -4,15 +4,17 @@
  * An object representing a method of production for some good,
  * for example a factory, farm, etc.
  */
-abstract class Production extends Updateable {
+abstract class Production extends Updateable implements Describable {
 
+    String name; ///The name of this production
     Player owner; ///The player who owns this production
     int produced; ///The identifier of what good is produced via this production
 
-    public Production(Player owner, int produced) {
+    public Production(String name, Player owner, int produced) {
         super();
         this.owner = owner;
         this.produced = produced;
+        this.name = name;
     }
 
     /**
