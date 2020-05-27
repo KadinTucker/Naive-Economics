@@ -22,4 +22,11 @@ abstract class Production extends Updateable implements Describable {
      */
     abstract double produce(int labor, int[] reagents);
 
+    /**
+     * Creates a production object copying this one's template
+     * Does not copy any data unique to the instance;
+     * For the abstract Production, this means just the owner
+     */
+    abstract Production createFor(Player toOwn);
+
 }

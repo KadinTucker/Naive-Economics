@@ -64,6 +64,13 @@ public class Player extends Updateable implements Describable {
     }
 
     /**
+     * Adder method for cash
+     */
+    public void addCash(double toAdd) {
+        this.cash += toAdd;
+    }
+
+    /**
      * Implementation of getLabel
      */
     public String getLabel() {

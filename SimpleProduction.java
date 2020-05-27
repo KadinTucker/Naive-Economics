@@ -67,4 +67,11 @@ public class SimpleProduction extends Production {
         return "Produces " + Data.GOOD_NAMES[this.produced] + "\nAvailable Resources: " + this.getAvailable() + " / " + this.maximum;
     }
 
+    /**
+     * Implementation of createFor from Production
+     */
+    public Production createFor(Player toOwn) {
+        return new SimpleProduction(this.name, toOwn, this.produced, this.maximum, this.growthRate, this.laborIntensity);
+    }
+
 }
